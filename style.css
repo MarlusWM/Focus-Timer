@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary:#121214;
+    --bg-secondary:#d8d8d8;
+    --bg-controls:#242424;
+    --controls:#42D3FF;
+    --text:#F8FBFC;
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+/*darkmode*/
+
+html.light {
+    background: var(--bg-primary);
+    color: var(--bg-secondary);
+}
+
+html:not(.light) {
+    background:var(--bg-secondary);
+    color: var(--bg-primary);
+}
+
+html.light .ph-sun, html:not(.light) .ph-moon {
+    display: none;
+}
+
+.content {
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16rem; 
+
+    display: grid;
+    place-content: center;
+}
+
+.btnDarkMode {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 3.2rem;
+    right: 5rem;
+}
+
+.ph-sun {
+    background: transparent;
+    color: var(--bg-primary);
+}
+
+.ph-moon {
+    background: transparent;
+    color: var(--bg-secondary);
+}
+
+.controls {
+    background: var(--bg-controls);
+    border-radius: 999px;
+    padding: 2.2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+.ph-moon {
+    background-color: transparent;
+    border: none;
+}
+
+.secondary {
+    color: var(--controls);
+}
+
+/*running*/
+.running .ph-play,
+.running .ph-alarm,
+.musicOn .ph-speaker-high,
+html:not(.running) .ph-pause,
+html:not(.running) .ph-stop,
+html:not(.musicOn) .ph-speaker-simple-x {
+        display: none;  
+}
