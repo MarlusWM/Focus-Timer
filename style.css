@@ -60,6 +60,13 @@ html.light .ph-sun, html:not(.light) .ph-moon {
     color: var(--bg-secondary);
 }
 
+.gridContent {
+    display: grid;
+    grid-template: 
+    'cronometer' 'musciStyle'
+    'controls';
+}
+
 .controls {
     background: var(--bg-controls);
     border-radius: 999px;
@@ -69,6 +76,64 @@ html.light .ph-sun, html:not(.light) .ph-moon {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+    grid-area: controls;
+}
+
+.gridMusicStyle {
+    display: grid;
+    grid-area: musicStyle;
+    grid-row-start: -4;
+    grid-row-end: -1;
+    border-radius: 999px;
+    padding: 2.2rem 4rem;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.musicStyle {
+    border-radius: 999px;
+    display: grid;
+    grid-template-areas:
+    '1' '1'
+    '2' '2';
+}
+
+.ph-tree {
+    font-size: 7rem;
+    grid-area: 1;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--bg-controls);
+    border-radius: 9px;
+}
+
+.ph-cloud-rain {
+    font-size: 7rem;
+    grid-area: 2;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--bg-controls);
+    border-radius: 9px;
+}
+
+.ph-storefront {
+    font-size: 7rem;
+    grid-area: 1;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--bg-controls);
+    border-radius: 9px;
+}
+
+.ph-fire {
+    font-size: 7rem;
+    grid-area: 2;
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--bg-controls);
+    border-radius: 9px;
 }
 
 button {
@@ -91,9 +156,8 @@ button {
 /*running*/
 .running .ph-play,
 .running .ph-alarm,
-.musicOn .ph-speaker-high,
+.musicOn .ph-speaker-simple-x,
 html:not(.running) .ph-pause,
-html:not(.running) .ph-stop,
-html:not(.musicOn) .ph-speaker-simple-x {
+html:not(.running) .ph-stop {
         display: none;  
 }

@@ -15,19 +15,30 @@
             <button class="ph ph-sun"></button>
             <button class="ph ph-moon"></button>
         </div>
-        <div class="cronometer">
-            <span id="minute">00</span>
-            <span>:</span>
-            <span id="second">00</span>
-        </div>
-
-        <div class="controls">
-            <button data-action = "toggleRunning" class="ph ph-play secondary"></button>
-            <button data-action = "toggleRunning" class="ph ph-pause secondary"></button>
-            <button data-action = "stop" class="ph ph-stop"></button>
-            <button data-action = "set" class="ph ph-alarm"></button>
-            <button data-action = "toggleMusic" class="ph ph-speaker-high secondary"></button>
-            <button data-action = "toggleMusic" class="ph ph-speaker-simple-x"></button>
+        <div class="gridContent">
+            <div class="cronometer">
+                <span id="minute">00</span>
+                <span>:</span>
+                <span id="second">00</span>
+            </div>
+            <div class="controls">
+                <button data-action = "toggleRunning" class="ph ph-play secondary"></button>
+                <button data-action = "toggleRunning" class="ph ph-pause secondary"></button>
+                <button data-action = "stop" class="ph ph-stop"></button>
+                <button data-action = "set" class="ph ph-alarm"></button>
+                <button data-action="sum" class="ph ph-plus-circle"></button>
+                <button data-action="subtract" class="ph ph-minus-circle"></button>
+                <!--<button data-action = "toggleMusic" class="ph ph-speaker-high secondary"></button>-->
+                <button data-action = "toggleMusic" class="ph ph-speaker-simple-x"></button>
+            </div>
+            <div class="gridMusicStyle">
+                <div class="musicStyle">
+                    <button data-action="forest" class="ph ph-tree"></button>
+                    <button data-action="rain" class="ph ph-cloud-rain"></button>
+                    <button data-action="coffee" class="ph ph-storefront"></button>
+                    <button data-action="fire" class="ph ph-fire"></button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
